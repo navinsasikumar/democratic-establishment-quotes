@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Primary Tracker</title>
+    <!-- Include js-yaml to parse the YAML file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --bg: #f8f9fa;
+            --border: #e9ecef;
+            --link: #0056b3;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg);
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border);
+        }
+        h2 {
+            margin-top: 3rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+        }
+        select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            flex-grow: 1;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
+        }
+        .card.action {
+            border-left-color: #e74c3c;
+        }
+        .meta {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .author {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        .content {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+        .card.action .content {
+            font-style: normal;
+        }
+        .source {
+            font-size: 0.875rem;
+            color: #888;
+            margin-top: 1rem;
+        }
+        .source a {
+            color: var(--link);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .source a:hover {
+            text-decoration: underline;
+        }
+        #error-msg {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .empty-state {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Democratic Establishment Tracker</h1>
+        <p>Documenting quotes and independent electoral actions directed at progressive and socialist primary winners.</p>
+    </header>
+
+    <div class="controls">
+        <select id="author-filter">
+            <option value="all">All People</option>
+            <!-- Populated dynamically -->
+        </select>
+        <select id="elected-filter">
+            <option value="all">Elected Status (All)</option>
+            <option value="true">Current Elected Official</option>
+            <option value="false">Not Currently Elected</option>
+        </select>
+        <select id="sort-order">
+            <option value="desc">Date: Newest First</option>
+            <option value="asc">Date: Oldest First</option>
+        </select>
+    </div>
+
+    <div id="error-msg"></div>
+
+    <h2>Direct Quotes</h2>
+    <div id="quotes-container"></div>
+
+    <h2>Independent Electoral Actions</h2>
+    <div id="actions-container"></div>
+
+    <script>
+        let globalQuotes = [];
+        let globalActions = [];
+
+        async function loadData() {
+            try {
+                const response = await fetch('data.yaml');
+                if (!response.ok) throw new Error('Could not load data.yaml');
+                
+                const yamlText = await response.text();
+                const data = jsyaml.load(yamlText);
+                
+                globalQuotes = data.quotes || [];
+                globalActions = data.actions || [];
+                
+                populateAuthorDropdown();
+                renderEntries();
+            } catch (error) {
+                document.getElementById('error-msg').textContent = 
+                    "Error loading data. Note: You must run this using a local web server (like python -m http.server), not directly from the file system.";
+                console.error(error);
+            }
+        }
+
+        function populateAuthorDropdown() {
+            const allAuthors = [...globalQuotes, ...globalActions].map(item => item.author);
+            const uniqueAuthors = [...new Set(allAuthors)].sort();
+            
+            const select = document.getElementById('author-filter');
+            uniqueAuthors.forEach(author => {
+                const option = document.createElement('option');
+                option.value = author;
+                option.textContent = author;
+                select.appendChild(option);
+            });
+        }
+
+        function filterAndSort(dataList) {
+            const authorFilter = document.getElementById('author-filter').value;
+            const electedFilter = document.getElementById('elected-filter').value;
+            const sortOrder = document.getElementById('sort-order').value;
+
+            // Filter
+            let filtered = dataList.filter(item => {
+                const matchAuthor = authorFilter === 'all' || item.author === authorFilter;
+                let matchElected = true;
+                if (electedFilter !== 'all') {
+                    const isElected = electedFilter === 'true';
+                    matchElected = item.is_elected_official === isElected;
+                }
+                return matchAuthor && matchElected;
+            });
+
+            // Sort
+            filtered.sort((a, b) => {
+                const dateA = new Date(a.date);
+                const dateB = new Date(b.date);
+                return sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
+            });
+
+            return filtered;
+        }
+
+        function generateCardHTML(item, isQuote) {
+            const contentHTML = isQuote ? `"${item.content.trim()}"` : item.content.trim();
+            const linkHTML = item.link ? `<a href="${item.link}" target="_blank">${item.source}</a>` : item.source;
+            const checkmark = item.is_elected_official ? '✓' : '';
+
+            return `
+                <div class="card ${isQuote ? 'quote' : 'action'}">
+                    <div class="meta">
+                        <span>
+                            <span class="author">${item.author}</span>, ${item.author_title} ${checkmark}
+                        </span>
+                        <span>${item.date}</span>
+                    </div>
+                    <div class="content">
+                        ${contentHTML}
+                    </div>
+                    <div class="source">
+                        <strong>Source:</strong> ${linkHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEntries() {
+            const quotesContainer = document.getElementById('quotes-container');
+            const actionsContainer = document.getElementById('actions-container');
+
+            const filteredQuotes = filterAndSort(globalQuotes);
+            const filteredActions = filterAndSort(globalActions);
+
+            if (filteredQuotes.length > 0) {
+                quotesContainer.innerHTML = filteredQuotes.map(item => generateCardHTML(item, true)).join('');
+            } else {
+                quotesContainer.innerHTML = '<p class="empty-state">No quotes match your filters.</p>';
+            }
+
+            if (filteredActions.length > 0) {
+                actionsContainer.innerHTML = filteredActions.map(item => generateCardHTML(item, false)).join('');
+            } else {
+                actionsContainer.innerHTML = '<p class="empty-state">No actions match your filters.</p>';
+            }
+        }
+
+        // Add event listeners to controls
+        document.getElementById('author-filter').addEventListener('change', renderEntries);
+        document.getElementById('elected-filter').addEventListener('change', renderEntries);
+        document.getElementById('sort-order').addEventListener('change', renderEntries);
+
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>
