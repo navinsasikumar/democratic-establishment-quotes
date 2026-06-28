@@ -1,5 +1,5 @@
 quotes:
-  - date: "2026-06-25"
+  - date: "2026-06-24"
     author: "Josh Gottheimer"
     author_title: "U.S. Representative (NJ-05)"
     is_elected_official: true
@@ -7,6 +7,33 @@ quotes:
       “Obviously, the socialists had a big win last night. The question is, are we going to let them take over the party? Or are we going to stand up and fight back? ... Many of us believe, as I do, that if you’re a socialist, you’re not a Democrat.”
     source: "Gottheimer Post-Primary Press Remarks"
     link: "https://www.youtube.com/watch?v=J3-Wq6y8jQY"
+  
+  - date: "2026-06-24"
+    author: "Letitia James"
+    author_title: "New York Attorney General"
+    is_elected_official: true
+    content: >
+      Some of the candidates that he[Mamdani] has supported are individuals who do not understand the politics of New York City, the cultural differences from district to district, who have not been part of the history and the struggle of some of these districts, and are relatively new to the body politic.
+    source: "CNN"
+    link: "https://www.cnn.com/2026/06/24/politics/zohran-mamdani-democrat-anger-primaries"
+  
+  - date: "2026-06-24"
+    author: "Greg Meeks"
+    author_title: "U.S. Representative (NY-05)"
+    is_elected_official: true
+    content: >
+      Instead of us making sure we put all of our resources to fight Republicans and to fight Donald Trump, we’re using it to fight each other.
+    source: "MS Now"
+    link: "https://www.ms.now/opinion/zohran-mamdani-democrats-criticism-primaries-socialism"
+  
+  - date: "2026-06-24"
+    author: "Jaime Harrison"
+    author_title: "Former Democratic National Committee Chair"
+    is_elected_official: false
+    content: >
+      If you hate the Democratic Party, then please don’t run for our nomination
+    source: "MS Now"
+    link: "https://www.ms.now/opinion/zohran-mamdani-democrats-criticism-primaries-socialism"
 
   - date: "2026-06-24"
     author: "Tom Suozzi"
