@@ -1,7 +1,7 @@
 quotes:
   - date: "2026-06-25"
     author: "Josh Gottheimer"
-    author_title: "U.S. Representative (NJ-5)"
+    author_title: "U.S. Representative (NJ-05)"
     is_elected_official: true
     content: >
       “Obviously, the socialists had a big win last night. The question is, are we going to let them take over the party? Or are we going to stand up and fight back? ... Many of us believe, as I do, that if you’re a socialist, you’re not a Democrat.”
@@ -10,7 +10,7 @@ quotes:
 
   - date: "2026-06-24"
     author: "Tom Suozzi"
-    author_title: "U.S. Representative (NY-3)"
+    author_title: "U.S. Representative (NY-03)"
     is_elected_official: true
     content: >
       Suozzi said it is time for the Democrats' moderate wing to "wake up" to the threat posed to them by the democratic socialists.
@@ -45,6 +45,126 @@ quotes:
     link: "https://www.cbsnews.com/newyork/news/india-walton-accepts-apology-jay-jacobs-david-duke/"
 
 actions:
+  - date: "2026-06-27"
+    author: "Tom Suozzi"
+    author_title: "U.S. Representative (NY-03)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Adam Gray"
+    author_title: "U.S. Representative (CA-13)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Josh Gottheimer"
+    author_title: "U.S. Representative (NJ-05)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Susie Lee"
+    author_title: "U.S. Representative (NV-03)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Don Davis"
+    author_title: "U.S. Representative (NC-01)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Laura Gillen"
+    author_title: "U.S. Representative (NY-04)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Kristen McDonald Rivet"
+    author_title: "U.S. Representative (MI-08)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Maggie Goodlander"
+    author_title: "U.S. Representative (NH-02)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Janelle Bynum"
+    author_title: "U.S. Representative (OR-05)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Vicente Gonzalez"
+    author_title: "U.S. Representative (TX-34)"
+    is_elected_official: true
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Jessica Killin"
+    author_title: "Candidate (CO-05)"
+    is_elected_official: false
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Jamie Ager"
+    author_title: "Candidate (NC-11)"
+    is_elected_official: false
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Bobby Pulido"
+    author_title: "Candidate (TX-15)"
+    is_elected_official: false
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Marlene Galán Woods"
+    author_title: "Candidate (AZ-01)"
+    is_elected_official: false
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
+  - date: "2026-06-27"
+    author: "Paul Barringer"
+    author_title: "Candidate (NC-13)"
+    is_elected_official: false
+    content: >
+      Thirteen moderate Democratic party members and challengers organized and signed onto the "Promise to America" pledge. The strategic initiative was explicitly launched to counter democratic socialist influence, re-centering the party's platform on capitalism and actively rejecting left-wing economic policies.
+    source: "The Promise to America Initiative"
+    link: "https://www.thepromisetoamerica.com/"
   - date: "2026-06-23"
     author: "Hakeem Jeffries"
     author_title: "House Minority Leader"
