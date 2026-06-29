@@ -1,4 +1,31 @@
 quotes:
+  - date: "2026-06-29"
+    author: "James Carville"
+    author_title: "Democratic strategist and former Bill Clinton adviser"
+    is_elected_official: false
+    content: >
+      "I actually do think it’s time for Democrats to talk the S-word: schism". He added that some DSA-aligned candidates “have no place in the Democratic party” and, of the broader coalition: “I’m not in that fucking political party.”
+    source: "Guardian"
+    link: "https://www.theguardian.com/us-news/2026/jun/29/centrist-democrats-democratic-socialists-backlash"
+
+  - date: "2026-06-26"
+    author: "James Carville"
+    author_title: "Democratic strategist and former Bill Clinton adviser"
+    is_elected_official: false
+    content: >
+      "Start your own movement. If it's such a powerful, sweeping movement that's got momentum everywhere, then go ahead and be at the head of it. Don't use the Democratic Party to advance it."
+    source: "VOZ"
+    link: "https://voz.us/en/politics/260626/36904/group-of-moderate-democrats-is-rebelling-against-the-rise-of-socialism-within-their-ranks-they-should-not-represent-the-face-of-our-party.html"
+
+  - date: "2026-06-26"
+    author: "Jessica Killin"
+    author_title: "Candidate (CO-05)"
+    is_elected_official: false
+    content: >
+      "They should not be the face of our party. We need to be organized and clear in our vision."
+    source: "VOZ"
+    link: "https://voz.us/en/politics/260626/36904/group-of-moderate-democrats-is-rebelling-against-the-rise-of-socialism-within-their-ranks-they-should-not-represent-the-face-of-our-party.html"
+
   - date: "2026-06-24"
     author: "Josh Gottheimer"
     author_title: "U.S. Representative (NJ-05)"
@@ -31,7 +58,7 @@ quotes:
     author_title: "Former Democratic National Committee Chair"
     is_elected_official: false
     content: >
-      If you hate the Democratic Party, then please don’t run for our nomination
+      If you hate the Democratic Party, then please don’t run for our nomination. Don’t use our resources. Don’t rely on our volunteers. Don’t use our infrastructure. Focus on building the party you actually support.
     source: "MS Now"
     link: "https://www.ms.now/opinion/zohran-mamdani-democrats-criticism-primaries-socialism"
 
